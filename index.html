@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dluxe24.tech | Stories worth staying for</title>
+  <title>dluxe24.tech | Tech, AI, and Digital Innovation</title>
   <meta
     name="description"
-    content="dluxe24.tech publishes technology, AI, innovation, design, and digital culture stories with a clean reader-first experience."
+    content="dluxe24.tech shares readable stories about AI, technology, digital products, and innovation with a clean editorial experience."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
     rel="stylesheet"
   />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
-  />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2076054588317705" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2076054588317705"
-       crossorigin="anonymous"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -31,15 +26,14 @@
           },
           colors: {
             night: "#0b1220",
-            mist: "#eef4ff",
-            signal: "#ff6b2c",
             ocean: "#1167ff",
+            signal: "#ff6b2c",
             pine: "#0c7c59",
-            sand: "#f7f1e8",
+            mist: "#eef4ff",
           },
           boxShadow: {
             soft: "0 18px 50px rgba(11, 18, 32, 0.08)",
-            glow: "0 28px 80px rgba(17, 103, 255, 0.18)",
+            glow: "0 30px 80px rgba(17, 103, 255, 0.16)",
           },
         },
       },
@@ -47,18 +41,8 @@
   </script>
   <style>
     :root {
-      --night: #0b1220;
-      --night-soft: #111b30;
-      --signal: #ff6b2c;
-      --ocean: #1167ff;
-      --mist: #eef4ff;
-      --sand: #f7f1e8;
       --line: rgba(11, 18, 32, 0.08);
-      --card: rgba(255, 255, 255, 0.86);
-    }
-
-    * {
-      box-sizing: border-box;
+      --card: rgba(255, 255, 255, 0.88);
     }
 
     html {
@@ -67,12 +51,12 @@
 
     body {
       margin: 0;
-      color: var(--night);
+      color: #0b1220;
       font-family: "Manrope", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(17, 103, 255, 0.14), transparent 26%),
-        radial-gradient(circle at top right, rgba(255, 107, 44, 0.14), transparent 22%),
-        linear-gradient(180deg, #fbfdff 0%, #f7f8fb 45%, #f3efe8 100%);
+        radial-gradient(circle at top left, rgba(17, 103, 255, 0.16), transparent 22%),
+        radial-gradient(circle at top right, rgba(255, 107, 44, 0.16), transparent 20%),
+        linear-gradient(180deg, #fbfdff 0%, #f6f8fc 45%, #f3efe9 100%);
       overflow-x: hidden;
     }
 
@@ -81,9 +65,9 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(17, 24, 39, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(17, 24, 39, 0.025) 1px, transparent 1px);
-      background-size: 52px 52px;
+        linear-gradient(rgba(11, 18, 32, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 18, 32, 0.03) 1px, transparent 1px);
+      background-size: 54px 54px;
       mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 92%);
       pointer-events: none;
       z-index: -1;
@@ -91,43 +75,39 @@
 
     .glass {
       background: var(--card);
-      border: 1px solid rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.65);
       backdrop-filter: blur(16px);
     }
 
-    .hero-orb {
-      position: absolute;
-      border-radius: 9999px;
-      filter: blur(22px);
-      opacity: 0.7;
-      animation: floatOrb 9s ease-in-out infinite;
-      pointer-events: none;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 800;
     }
 
-    .hero-orb.orb-1 {
-      top: -48px;
-      right: 10%;
-      width: 220px;
-      height: 220px;
-      background: rgba(17, 103, 255, 0.25);
+    .brand::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff6b2c, #1167ff);
+      box-shadow: 0 0 0 8px rgba(17, 103, 255, 0.08), 0 0 30px rgba(255, 107, 44, 0.28);
+      animation: pulseBrand 2.8s ease-in-out infinite;
     }
 
-    .hero-orb.orb-2 {
-      bottom: 8%;
-      left: -40px;
-      width: 180px;
-      height: 180px;
-      background: rgba(255, 107, 44, 0.24);
-      animation-delay: -3s;
-    }
-
-    .hero-orb.orb-3 {
-      bottom: -30px;
-      right: 28%;
-      width: 140px;
-      height: 140px;
-      background: rgba(12, 124, 89, 0.2);
-      animation-delay: -6s;
+    .brand-wordmark {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      background: linear-gradient(90deg, #0b1220 0%, #1167ff 45%, #ff6b2c 78%, #0b1220 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 8s linear infinite;
     }
 
     .eyebrow {
@@ -135,13 +115,13 @@
       align-items: center;
       gap: 10px;
       padding: 8px 14px;
-      border-radius: 9999px;
+      border-radius: 999px;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       background: rgba(17, 103, 255, 0.08);
-      color: var(--ocean);
+      color: #1167ff;
       border: 1px solid rgba(17, 103, 255, 0.12);
     }
 
@@ -149,151 +129,35 @@
       content: "";
       width: 8px;
       height: 8px;
-      border-radius: 9999px;
-      background: var(--signal);
+      border-radius: 999px;
+      background: #ff6b2c;
       box-shadow: 0 0 0 6px rgba(255, 107, 44, 0.12);
     }
 
     .headline {
       font-family: "Cormorant Garamond", serif;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 0.95;
+      letter-spacing: -0.04em;
+      line-height: 0.94;
     }
 
-    .brand-mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .brand-mark::before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      border-radius: 9999px;
-      background: linear-gradient(135deg, var(--signal), var(--ocean));
-      box-shadow:
-        0 0 0 8px rgba(17, 103, 255, 0.08),
-        0 0 30px rgba(255, 107, 44, 0.35);
-      animation: pulseBrand 2.8s ease-in-out infinite;
-    }
-
-    .brand-wordmark {
-      display: inline-block;
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--night);
-      text-shadow: 0 8px 24px rgba(17, 103, 255, 0.15);
-      animation: brandGlow 2.8s ease-in-out infinite;
-    }
-
-    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-      .brand-wordmark {
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        background: linear-gradient(90deg, #ffffff 0%, #9bc1ff 22%, #ffcf9f 48%, #ffffff 72%, #9bc1ff 100%);
-        background-size: 220% auto;
-        animation: shimmerBrand 7s linear infinite, brandGlow 2.8s ease-in-out infinite;
-      }
-
-      .brand-wordmark.dark {
-        background: linear-gradient(90deg, #0b1220 0%, #1167ff 28%, #ff6b2c 58%, #0b1220 100%);
-        background-size: 220% auto;
-      }
-    }
-
-    .brand-wordmark.dark {
-      color: var(--night);
-    }
-
-    .section-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-
-    .section-kicker {
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(11, 18, 32, 0.55);
-    }
-
-    .feature-card,
-    .story-card,
-    .mini-card,
-    .insight-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    }
-
-    .clickable-card {
-      cursor: pointer;
-    }
-
-    .feature-card:hover,
-    .story-card:hover,
-    .mini-card:hover,
-    .insight-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 60px rgba(11, 18, 32, 0.12);
-      border-color: rgba(17, 103, 255, 0.18);
-    }
-
-    .image-zoom {
-      overflow: hidden;
-    }
-
-    .image-zoom img {
-      transition: transform 0.7s ease;
-    }
-
-    .feature-card:hover img,
-    .story-card:hover img,
-    .mini-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .ticker-track {
-      display: inline-flex;
-      gap: 28px;
-      min-width: max-content;
-      padding-right: 28px;
-      animation: ticker 26s linear infinite;
-    }
-
-    .ticker-wrap:hover .ticker-track {
-      animation-play-state: paused;
-    }
-
-    .stat-card strong {
+    .card-link,
+    .story-link {
       display: block;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1;
-      color: var(--night);
+      transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
     }
 
-    .sticky-rail {
-      position: sticky;
-      top: 24px;
+    .card-link:hover,
+    .story-link:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 48px rgba(11, 18, 32, 0.12);
+      border-color: rgba(17, 103, 255, 0.18);
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-      transition-delay: var(--reveal-delay, 0s);
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      transition-delay: var(--delay, 0s);
     }
 
     .reveal.is-visible {
@@ -301,84 +165,8 @@
       transform: translateY(0);
     }
 
-    .story-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .ad-slot {
-      position: relative;
-      overflow: hidden;
-      border: 1px dashed rgba(11, 18, 32, 0.18);
-      background:
-        linear-gradient(135deg, rgba(17, 103, 255, 0.06), rgba(255, 107, 44, 0.08)),
-        rgba(255, 255, 255, 0.7);
-    }
-
-    .ad-slot::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        rgba(11, 18, 32, 0.02) 10px,
-        rgba(11, 18, 32, 0.02) 20px
-      );
-      pointer-events: none;
-    }
-
-    .ad-slot > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .newsletter-gradient {
-      background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 30%),
-        linear-gradient(135deg, #101b33 0%, #152b59 65%, #0c7c59 130%);
-    }
-
-    .footer-grid {
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
-        rgba(11, 18, 32, 0.95);
-    }
-
-    @keyframes ticker {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    @keyframes floatOrb {
-      0%,
-      100% {
-        transform: translate3d(0, 0, 0) scale(1);
-      }
-      50% {
-        transform: translate3d(0, -16px, 0) scale(1.06);
-      }
-    }
-
-    @keyframes shimmerBrand {
-      from {
-        background-position: 0% center;
-      }
-      to {
-        background-position: 220% center;
-      }
+    .article-target {
+      scroll-margin-top: 100px;
     }
 
     @keyframes pulseBrand {
@@ -386,24 +174,19 @@
       100% {
         transform: scale(1);
       }
+
       50% {
-        transform: scale(1.18);
+        transform: scale(1.16);
       }
     }
 
-    @keyframes brandGlow {
-      0%,
-      100% {
-        text-shadow: 0 8px 24px rgba(17, 103, 255, 0.14);
+    @keyframes shimmer {
+      from {
+        background-position: 0 center;
       }
-      50% {
-        text-shadow: 0 10px 28px rgba(255, 107, 44, 0.24);
-      }
-    }
 
-    @media (max-width: 1023px) {
-      .sticky-rail {
-        position: static;
+      to {
+        background-position: 220% center;
       }
     }
 
@@ -412,16 +195,11 @@
         scroll-behavior: auto;
       }
 
-      .ticker-track,
-      .hero-orb,
+      .brand::before,
+      .brand-wordmark,
       .reveal,
-      .feature-card,
-      .story-card,
-      .mini-card,
-      .insight-card,
-      .image-zoom img,
-      .brand-mark::before,
-      .brand-wordmark {
+      .card-link,
+      .story-link {
         animation: none !important;
         transition: none !important;
         transform: none !important;
@@ -431,598 +209,316 @@
   </style>
 </head>
 <body class="min-h-screen">
-  <div class="mx-auto max-w-[1440px] px-4 pb-16 pt-4 md:px-6 lg:px-8">
-    <div class="glass mb-4 rounded-[28px] border border-white/60 px-4 py-3 shadow-soft md:px-6">
-      <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-        <div class="flex items-center gap-3 text-sm text-slate-600">
-          <span class="eyebrow">Live Edition</span>
-          <span class="hidden h-4 w-px bg-slate-200 md:block"></span>
-          <span>Friday, March 27, 2026</span>
-        </div>
-        <div class="ticker-wrap overflow-hidden rounded-full bg-slate-900 px-4 py-2 text-sm text-white">
-          <div class="ticker-track">
-            <span>Signal AI raises $240M to build newsroom workflow tools.</span>
-            <span>Urban heat design becomes the breakout beat of climate reporting.</span>
-            <span>Readers spend 37% longer on deeply visual longform layouts.</span>
-            <span>Independent creators are turning newsletters into micro media brands.</span>
-            <span>Signal AI raises $240M to build newsroom workflow tools.</span>
-            <span>Urban heat design becomes the breakout beat of climate reporting.</span>
-            <span>Readers spend 37% longer on deeply visual longform layouts.</span>
-            <span>Independent creators are turning newsletters into micro media brands.</span>
+  <div class="mx-auto max-w-[1280px] px-4 pb-16 pt-4 md:px-6 lg:px-8">
+    <header class="glass mb-4 rounded-[28px] px-5 py-4 shadow-soft md:px-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div class="brand text-sm text-slate-500">
+            <span class="brand-wordmark text-3xl md:text-4xl">dluxe24.tech</span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <header class="glass reveal relative overflow-hidden rounded-[36px] border border-white/60 px-5 pb-8 pt-6 shadow-glow md:px-8 lg:px-10">
-      <span class="hero-orb orb-1"></span>
-      <span class="hero-orb orb-2"></span>
-      <span class="hero-orb orb-3"></span>
-
-      <div class="relative z-10">
-        <div class="mb-8 flex flex-col gap-5 border-b border-slate-200/70 pb-6 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <div class="brand-mark mb-3 text-sm text-slate-500">
-              <span class="brand-wordmark dark text-2xl md:text-3xl">dluxe24.tech</span>
-            </div>
-            <a href="#latest" class="headline inline-block text-5xl text-night md:text-6xl lg:text-7xl">A smarter home for modern stories</a>
-          </div>
-          <div class="max-w-md text-sm leading-7 text-slate-600">
-            Discover thoughtful stories, practical ideas, and fresh perspectives designed to inform your day and make every visit worth your time.
-          </div>
-        </div>
-
-        <nav class="mb-8 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-600">
-          <a href="#latest" class="rounded-full bg-slate-900 px-4 py-2 text-white">Latest</a>
-          <a href="#features" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Features</a>
-          <a href="#categories" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Categories</a>
+        <nav class="flex flex-wrap gap-3 text-sm font-bold text-slate-600">
+          <a href="#top-stories" class="rounded-full bg-slate-900 px-4 py-2 text-white">Top Stories</a>
           <a href="#blogs" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Blogs</a>
-          <a href="#newsletter" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Newsletter</a>
+          <a href="about.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">About</a>
+          <a href="privacy-policy.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Privacy</a>
+          <a href="contact.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Contact</a>
         </nav>
-
-        <div id="latest" class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-          <article class="feature-card clickable-card reveal glass rounded-[32px] p-4 shadow-soft" style="--reveal-delay: 0.08s;" data-open="article-cover" tabindex="0" role="link">
-            <div class="grid gap-5 lg:grid-cols-[1.12fr_0.88fr]">
-              <div class="image-zoom rounded-[26px]">
-                <img
-                  src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80"
-                  alt="Editorial team planning the next publication"
-                  class="h-full min-h-[340px] w-full rounded-[26px] object-cover"
-                />
-              </div>
-              <div class="flex flex-col justify-between rounded-[26px] bg-slate-950 p-6 text-white">
-                <div>
-                  <span class="story-pill bg-white/10 text-slate-200">Cover Story</span>
-                  <h1 class="headline mt-5 text-4xl md:text-5xl">
-                    Why the best editorial websites now feel like elegant apps
-                  </h1>
-                  <p class="mt-4 text-base leading-7 text-slate-300">
-                    The strongest reading experiences mix cinematic imagery, clear structure, and subtle motion. Readers stay longer when discovery feels effortless and every section has a visual reward.
-                  </p>
-                </div>
-                <div class="mt-8 flex flex-wrap items-center gap-4 border-t border-white/10 pt-5 text-sm text-slate-300">
-                  <span><i class="ti ti-clock-hour-4 mr-2"></i>8 min read</span>
-                  <span><i class="ti ti-sparkles mr-2"></i>Design Systems</span>
-                  <a href="#article-cover" class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-bold text-slate-900 transition hover:bg-signal hover:text-white">
-                    Read Feature
-                    <i class="ti ti-arrow-up-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <div class="grid gap-5">
-            <article class="mini-card clickable-card reveal glass rounded-[28px] p-5 shadow-soft" style="--reveal-delay: 0.16s;" data-open="article-motion" tabindex="0" role="link">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <span class="story-pill bg-orange-100 text-orange-700">Trending</span>
-                  <h2 class="mt-4 text-2xl font-extrabold leading-tight text-night">
-                    Scroll animation should support reading, not distract from it
-                  </h2>
-                </div>
-                <span class="rounded-full bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-orange-600">02</span>
-              </div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">
-                Strong reveals, layered parallax cues, and hover depth can make a news site feel premium when motion remains light and intentional.
-              </p>
-            </article>
-
-            <article class="mini-card reveal glass rounded-[28px] p-5 shadow-soft" style="--reveal-delay: 0.24s;">
-              <div class="mb-4 flex items-center justify-between">
-                <span class="story-pill bg-blue-100 text-blue-700">Reader Signal</span>
-                <i class="ti ti-chart-dots-3 text-2xl text-blue-600"></i>
-              </div>
-              <div class="grid grid-cols-3 gap-3">
-                <div class="stat-card rounded-3xl bg-white p-4 text-center">
-                  <strong>6.4m</strong>
-                  <span class="mt-2 block text-xs uppercase tracking-[0.18em] text-slate-500">Monthly views</span>
-                </div>
-                <div class="stat-card rounded-3xl bg-white p-4 text-center">
-                  <strong>11m</strong>
-                  <span class="mt-2 block text-xs uppercase tracking-[0.18em] text-slate-500">Read time</span>
-                </div>
-                <div class="stat-card rounded-3xl bg-white p-4 text-center">
-                  <strong>92%</strong>
-                  <span class="mt-2 block text-xs uppercase tracking-[0.18em] text-slate-500">Engagement</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="mini-card clickable-card reveal overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft" style="--reveal-delay: 0.32s;" data-open="article-loyalty" tabindex="0" role="link">
-              <div class="image-zoom">
-                <img
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
-                  alt="Team working on laptops around a desk"
-                  class="h-44 w-full object-cover"
-                />
-              </div>
-              <div class="p-5">
-                <span class="story-pill bg-emerald-100 text-emerald-700">Inside Product</span>
-                <h3 class="mt-4 text-xl font-extrabold leading-tight text-night">
-                  The homepage pattern that turns casual visitors into loyal readers
-                </h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
-                  Mix one standout lead story, multiple visual paths, and a soft newsletter conversion point near the middle of the experience.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
     </header>
 
-    <section class="reveal my-8 grid gap-4 md:grid-cols-3" style="--reveal-delay: 0.06s;">
-      <div class="glass rounded-[28px] p-5 shadow-soft">
-        <div class="section-kicker">Fast Brief</div>
-        <h3 class="mt-3 text-2xl font-extrabold text-night">Build trust in the first screen</h3>
-        <p class="mt-2 text-sm leading-7 text-slate-600">
-          Clear spacing, readable typography, and one strong promise help readers decide in seconds whether the site is worth exploring.
-        </p>
-      </div>
-      <div class="glass rounded-[28px] p-5 shadow-soft">
-        <div class="section-kicker">Story Flow</div>
-        <h3 class="mt-3 text-2xl font-extrabold text-night">Design like a magazine, navigate like an app</h3>
-        <p class="mt-2 text-sm leading-7 text-slate-600">
-          Readers like visual richness, but they also want quick paths to categories, saved intent, and content that feels easy to keep reading.
-        </p>
-      </div>
-      <div class="glass rounded-[28px] p-5 shadow-soft">
-        <div class="section-kicker">Monetization</div>
-        <h3 class="mt-3 text-2xl font-extrabold text-night">Set revenue up without hurting trust</h3>
-        <p class="mt-2 text-sm leading-7 text-slate-600">
-          Keep the layout clean first, then let approved ad placements support the experience instead of interrupting it too early.
-        </p>
-      </div>
-    </section>
-
-    <main class="grid gap-8 lg:grid-cols-[1fr_340px]">
-      <div class="space-y-8">
-        <section id="features" class="reveal rounded-[34px] bg-white p-6 shadow-soft md:p-8" style="--reveal-delay: 0.08s;">
-          <div class="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div class="section-kicker">Feature Stack</div>
-              <h2 class="section-title mt-2">A homepage framework readers can move through naturally</h2>
+    <main class="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+      <section class="space-y-6">
+        <section id="top-stories" class="glass reveal overflow-hidden rounded-[34px] px-6 py-8 shadow-glow md:px-8 md:py-10" style="--delay: 0.04s;">
+          <div class="mb-6 flex flex-col gap-5 border-b border-slate-200/80 pb-6 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-3xl">
+              <span class="eyebrow">Live Editorial</span>
+              <h1 class="headline mt-5 text-5xl text-night md:text-6xl lg:text-7xl">
+                Tech, AI, and design stories that stay useful after the scroll.
+              </h1>
             </div>
-            <p class="max-w-2xl text-sm leading-7 text-slate-600">
-              Premium editorial websites work best when they mix one strong lead, supporting stories, useful categories, and quick access to deeper content.
+            <p class="max-w-md text-sm leading-7 text-slate-600">
+              dluxe24.tech is built for readers who want sharp ideas, clean design, and articles that open fast and feel worth the click.
             </p>
           </div>
 
-          <div class="grid gap-5 lg:grid-cols-3">
-            <article class="story-card reveal overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-soft" style="--reveal-delay: 0.1s;">
-              <div class="image-zoom">
-                <img
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80"
-                  alt="Creative team collaborating on digital content"
-                  class="h-56 w-full object-cover"
-                />
-              </div>
-              <div class="p-5">
-                <div class="section-kicker">Editorial UX</div>
-                <h3 class="mt-2 text-2xl font-extrabold text-night">Seven homepage blocks that keep readers moving headline to headline</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
-                  Hero, briefs, category gateways, feature cards, trust signals, newsletter, and footer loops all work together to keep attention flowing.
-                </p>
-              </div>
-            </article>
-
-            <article class="story-card reveal overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-soft" style="--reveal-delay: 0.16s;">
-              <div class="image-zoom">
-                <img
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80"
-                  alt="Small team working in a modern office"
-                  class="h-56 w-full object-cover"
-                />
-              </div>
-              <div class="p-5">
-                <div class="section-kicker">Creator Economy</div>
-                <h3 class="mt-2 text-2xl font-extrabold text-night">How small media brands are acting like products to grow faster</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
-                  Repeatable formats, stronger packaging, and clearer story discovery turn independent publishing into a habit-forming product.
-                </p>
-              </div>
-            </article>
-
-            <article class="story-card reveal overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-soft" style="--reveal-delay: 0.22s;">
-              <div class="image-zoom">
-                <img
-                  src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1000&q=80"
-                  alt="Designer reviewing layouts on a large screen"
-                  class="h-56 w-full object-cover"
-                />
-              </div>
-              <div class="p-5">
-                <div class="section-kicker">Design Culture</div>
-                <h3 class="mt-2 text-2xl font-extrabold text-night">Why great packaging makes niche topics feel impossible to ignore</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
-                  Better covers, bolder headlines, and sharper category identity can transform small topics into irresistible entry points.
-                </p>
-              </div>
-            </article>
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="rounded-[24px] bg-slate-950 p-5 text-white">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-blue-200">Weekly Focus</div>
+              <div class="mt-3 text-3xl font-extrabold">12</div>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Fresh technology and AI story angles prepared for regular publishing.</p>
+            </div>
+            <div class="rounded-[24px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Reader First</div>
+              <div class="mt-3 text-3xl font-extrabold text-night">Fast</div>
+              <p class="mt-2 text-sm leading-7 text-slate-600">Clean sections, clear article links, and lighter code for a smoother experience.</p>
+            </div>
+            <div class="rounded-[24px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Monetization</div>
+              <div class="mt-3 text-3xl font-extrabold text-night">Ready</div>
+              <p class="mt-2 text-sm leading-7 text-slate-600">AdSense script is installed while the visible layout stays editorial and uncluttered.</p>
+            </div>
           </div>
         </section>
 
-        <section id="categories" class="reveal rounded-[34px] bg-slate-950 p-6 text-white shadow-soft md:p-8" style="--reveal-delay: 0.1s;">
-          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <div class="section-kicker text-slate-300">Category Grid</div>
-              <h2 class="section-title mt-2 text-white">Build distinct lanes so readers know exactly where to go next</h2>
-              <p class="mt-4 text-sm leading-7 text-slate-300">
-                Strong category branding helps a homepage feel alive. Each topic should look intentionally framed, easy to scan, and valuable at a glance.
+        <section class="reveal grid gap-5 md:grid-cols-[1.08fr_0.92fr]" style="--delay: 0.08s;">
+          <a href="#article-cover" class="story-link glass rounded-[30px] border border-[var(--line)] p-5 shadow-soft">
+            <img
+              src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80"
+              alt="Editorial planning session"
+              class="h-72 w-full rounded-[24px] object-cover"
+            />
+            <div class="mt-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Cover Story</div>
+              <h2 class="mt-3 font-serif text-4xl leading-tight text-night">Why the strongest editorial sites now feel like elegant apps</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Readers stay longer when design choices guide them with clarity, motion, and content that feels carefully packaged.
               </p>
             </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="section-kicker text-slate-300">AI Innovation</div>
-                <h3 class="mt-2 text-xl font-extrabold text-white">Tools, agents, and applied intelligence</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Where software becomes more adaptive, task-aware, and deeply integrated into real workflows.</p>
-              </div>
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="section-kicker text-slate-300">Tech Hardware</div>
-                <h3 class="mt-2 text-xl font-extrabold text-white">Chips, devices, and AI-first machines</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-300">The new hardware race is shaping what fast local intelligence feels like in daily products.</p>
-              </div>
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="section-kicker text-slate-300">Future UI</div>
-                <h3 class="mt-2 text-xl font-extrabold text-white">How interfaces evolve around intent</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Screens are getting quieter while systems underneath become more adaptive and helpful.</p>
-              </div>
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="section-kicker text-slate-300">Writing Systems</div>
-                <h3 class="mt-2 text-xl font-extrabold text-white">Longform habits that earn completion</h3>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Structure, subheads, pacing, and clear payoff points can keep readers moving through larger stories.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="blogs" class="reveal rounded-[34px] bg-white p-6 shadow-soft md:p-8" style="--reveal-delay: 0.08s;">
-          <div class="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div class="section-kicker">Open Articles</div>
-              <h2 class="section-title mt-2">Blog posts you can actually open</h2>
-            </div>
-            <p class="max-w-2xl text-sm leading-7 text-slate-600">
-              Every main card now opens a matching article section below, so readers move smoothly from headlines into full reading without dead links.
-            </p>
-          </div>
-
-          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-blocks" tabindex="0" role="link">
-              <div class="section-kicker">Editorial UX</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">7 homepage blocks that keep readers moving from headline to headline</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">A stronger homepage uses structure as momentum, not decoration.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-creator" tabindex="0" role="link">
-              <div class="section-kicker">Creator Economy</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">Small media brands are growing faster by acting more like products</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Discovery design and recurring formats are becoming a bigger growth lever.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-design-culture" tabindex="0" role="link">
-              <div class="section-kicker">Design Culture</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">How indie publishers are making niche topics feel irresistible</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Packaging changes how people judge value before they read a word.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-writing" tabindex="0" role="link">
-              <div class="section-kicker">Writing Systems</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">Five editorial habits that make longform stories easier to finish</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Good pacing helps readers feel progress instead of effort.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-growth" tabindex="0" role="link">
-              <div class="section-kicker">Growth Stories</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">Why smaller content teams are winning with fewer posts and better packaging</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Quality beats volume when every story gets a sharper presentation.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-ai-agents" tabindex="0" role="link">
-              <div class="section-kicker">AI Innovation</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">AI agents are moving from demos to real workflow teammates</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Businesses are starting to value continuity, orchestration, and task carryover.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-ai-hardware" tabindex="0" role="link">
-              <div class="section-kicker">Tech Hardware</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">The new race to build chips made for AI-first products</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Better local performance will redefine what responsive products feel like.</p>
-            </article>
-            <article class="insight-card clickable-card rounded-[28px] bg-slate-50 p-5" data-open="article-future-ui" tabindex="0" role="link">
-              <div class="section-kicker">Future UI</div>
-              <h3 class="mt-3 text-2xl font-extrabold leading-tight text-night">Why AI-first interfaces are changing how apps get designed</h3>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Design is shifting from exposed navigation toward adaptive intent-based experiences.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="reveal rounded-[34px] bg-slate-900 p-6 text-white shadow-soft md:p-8" style="--reveal-delay: 0.08s;">
-          <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <div class="section-kicker text-blue-100">Why it works</div>
-              <h2 class="section-title mt-2 text-white">Readers stay longer when every section earns the next scroll</h2>
-              <p class="mt-4 text-sm leading-7 text-slate-300">
-                Good editorial design feels calm, useful, and rewarding. This layout combines clear hierarchy, openable stories, and engaging cards and blog blocks for discovery.
-              </p>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-3">
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="text-3xl font-extrabold text-white">01</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">One strong hero story that sets the tone immediately.</p>
-              </div>
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="text-3xl font-extrabold text-white">02</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Multiple engaging cards and blog blocks for discovery.</p>
-              </div>
-              <div class="rounded-[26px] border border-white/10 bg-white/5 p-5">
-                <div class="text-3xl font-extrabold text-white">03</div>
-                <p class="mt-3 text-sm leading-7 text-slate-300">Scroll-triggered motion that adds polish without noise.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="articles" class="reveal rounded-[34px] bg-white p-6 shadow-soft md:p-8" style="--reveal-delay: 0.08s;">
-          <div class="mb-6">
-            <div class="section-kicker">Featured Reading</div>
-            <h2 class="section-title mt-2">Explore deeper stories behind the headlines</h2>
-            <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">
-              Each featured card leads to a full article section below, giving readers a smoother path from discovery to detailed reading.
-            </p>
-          </div>
+          </a>
 
           <div class="space-y-5">
-            <article id="article-cover" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Cover Story</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Why today's best editorial websites feel more like refined digital products</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Readers want more than information. They want clarity, pace, and an experience that feels easy to move through. The strongest editorial sites borrow from great product design by using cleaner hierarchy, smarter spacing, and content blocks that guide attention with purpose. The result is a reading experience that feels both trustworthy and memorable.
-              </p>
-            </article>
-
-            <article id="article-motion" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Motion Design</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Scroll animation should guide attention, not compete with the story</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Thoughtful motion gives a page rhythm and polish. It can introduce sections gracefully, emphasize important content, and make long pages feel easier to follow. The key is control. Small reveals, subtle hover movement, and consistent timing add sophistication without overwhelming the reader.
-              </p>
-            </article>
-
-            <article id="article-loyalty" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Reader Growth</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">The homepage formula that turns first-time visitors into loyal readers</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Reader loyalty grows when the homepage feels purposeful from the first glance. A strong lead story, a set of quick secondary reads, and an obvious next step help visitors stay engaged without hesitation. Every section should feel connected, useful, and visually consistent enough to build trust with each scroll.
-              </p>
-            </article>
-
-            <article id="article-blocks" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Editorial UX</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Seven homepage elements that keep readers moving from one story to the next</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Great editorial homepages are rarely built around a single hero alone. They balance a lead feature with quick briefs, strong supporting cards, category entry points, credibility signals, newsletter prompts, and a footer designed for recirculation. Together, these elements create a flow that feels deliberate and engaging.
-              </p>
-            </article>
-
-            <article id="article-creator" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Creator Economy</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Why small media brands are growing faster by thinking like product teams</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Independent publishers are succeeding by doing more than publishing on schedule. They shape discovery carefully, package stories more clearly, and build repeat habits through consistent formats and recurring sections. That approach makes the brand feel genuinely useful every time a reader returns.
-              </p>
-            </article>
-
-            <article id="article-design-culture" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Design Culture</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">How independent publishers make niche topics feel impossible to ignore</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Specialized content becomes far more compelling when the presentation feels confident. Better visual framing, more precise headlines, and stronger category identity help niche topics feel premium rather than limited. Often, that alone is enough to transform curiosity into sustained attention.
-              </p>
-            </article>
-
-            <article id="article-writing" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Writing Systems</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Five editorial habits that make longform stories easier to finish</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Longform performs best when it respects the reader's momentum. Clear opening lines, meaningful subheads, visually breathable paragraphs, and strong payoff moments help people stay engaged to the end. The goal is not simply to publish more words, but to make every section feel easy to continue reading.
-              </p>
-            </article>
-
-            <article id="article-growth" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Growth Stories</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Why smaller content teams often win with fewer posts and better packaging</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                More publishing does not always mean better performance. Smaller teams often outperform by choosing stronger stories, presenting them more clearly, and investing in better design quality. A well-crafted article card and a smart conversion moment can do far more than a homepage overloaded with weak links.
-              </p>
-            </article>
-
-            <article id="article-ai-agents" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">AI Innovation</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">AI agents are evolving from impressive demos into practical work partners</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                A new generation of AI tools is moving beyond simple prompt responses. These systems can help summarize research, draft plans, organize tasks, and move work forward across multiple steps. The real breakthrough is not only better output, but stronger continuity. As companies look for practical results, agent-based workflows are emerging as one of the most important directions in AI.
-              </p>
-            </article>
-
-            <article id="article-ai-hardware" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Tech Hardware</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">The race to build chips designed for an AI-first generation of products</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                AI is pushing hardware innovation into a new era. Companies are competing to create chips that run advanced models faster, use less energy, and bring intelligence closer to the user. That shift matters because local AI changes how products feel in everyday use. Phones, laptops, and edge devices are becoming more responsive and more personal as hardware becomes central to the AI experience.
-              </p>
-            </article>
-
-            <article id="article-future-ui" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Future UI</div>
-              <h3 class="mt-2 text-3xl font-extrabold text-night">Why AI-first interfaces are reshaping the way modern apps are designed</h3>
-              <p class="mt-4 text-sm leading-8 text-slate-600">
-                Designers are beginning to build around intent rather than navigation alone. When AI can suggest, automate, and adapt in real time, interfaces no longer need to expose every action from the start. The best products are moving toward cleaner surfaces with smarter behavior underneath, creating experiences that feel more helpful, more intuitive, and more human.
-              </p>
-            </article>
+            <a href="#article-ai-agents" class="card-link glass rounded-[28px] border border-[var(--line)] p-5 shadow-soft">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">AI Innovation</div>
+              <h3 class="mt-3 text-2xl font-extrabold text-night">AI agents are moving from demos to real workflow teammates</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">The most practical AI tools now carry context between tasks instead of restarting every interaction.</p>
+            </a>
+            <a href="#article-hardware" class="card-link glass rounded-[28px] border border-[var(--line)] p-5 shadow-soft">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Tech Hardware</div>
+              <h3 class="mt-3 text-2xl font-extrabold text-night">The race to build chips for AI-first products is speeding up</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Faster local inference is turning hardware into part of the product story, not just the backend.</p>
+            </a>
           </div>
         </section>
 
-        <section id="about-site" class="reveal rounded-[34px] bg-white p-6 shadow-soft md:p-8" style="--reveal-delay: 0.08s;">
-          <div class="grid gap-5 lg:grid-cols-3">
-            <article class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">About</div>
-              <h3 class="mt-2 text-2xl font-extrabold text-night">About dluxe24.tech</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                dluxe24.tech covers technology, AI innovation, digital products, and modern internet culture through accessible, reader-first articles.
-              </p>
-            </article>
-            <article id="privacy" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Privacy</div>
-              <h3 class="mt-2 text-2xl font-extrabold text-night">Privacy overview</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                This site aims to respect user privacy, limit unnecessary data collection, and clearly disclose third-party services such as analytics or advertising when they are added.
-              </p>
-            </article>
-            <article id="contact" class="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
-              <div class="section-kicker">Contact</div>
-              <h3 class="mt-2 text-2xl font-extrabold text-night">Get in touch</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Contact: hello@dluxe24.tech<br />
-                Website: https://dluxe24.tech
-              </p>
-            </article>
+        <section id="blogs" class="reveal glass rounded-[32px] px-6 py-7 shadow-soft md:px-8" style="--delay: 0.12s;">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Curated Blogs</div>
+              <h2 class="mt-3 font-serif text-4xl text-night md:text-5xl">Open articles worth reading</h2>
+            </div>
+            <p class="max-w-md text-sm leading-7 text-slate-600">
+              Every featured card below jumps to a full article section on this page, so your visitors always land somewhere meaningful.
+            </p>
+          </div>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <a href="#article-motion" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Motion Design</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">Scroll animation should support reading, not distract from it</h3>
+            </a>
+            <a href="#article-growth" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Reader Growth</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">The homepage pattern that turns casual visitors into loyal readers</h3>
+            </a>
+            <a href="#article-editorial-ux" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Editorial UX</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">Seven homepage blocks that keep readers moving</h3>
+            </a>
+            <a href="#article-creator" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Creator Economy</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">Why small media brands grow faster when they act like products</h3>
+            </a>
+            <a href="#article-design-culture" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Design Culture</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">How indie publishers make niche topics feel irresistible</h3>
+            </a>
+            <a href="#article-future-ui" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Future UI</div>
+              <h3 class="mt-3 text-xl font-extrabold text-night">Why AI-first interfaces are changing how apps are designed</h3>
+            </a>
           </div>
         </section>
-      </div>
+
+        <section class="reveal glass rounded-[32px] px-6 py-7 shadow-soft md:px-8" style="--delay: 0.16s;">
+          <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div class="rounded-[28px] bg-slate-950 p-6 text-white">
+              <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-blue-200">Newsletter</div>
+              <h2 class="mt-3 font-serif text-4xl">Get one smart update every week</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-300">
+                Keep the promise simple. Readers respond better when subscriptions feel useful and low-pressure.
+              </p>
+              <div class="mt-5 grid gap-3 sm:grid-cols-[1fr_auto]">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 focus:border-white focus:outline-none"
+                />
+                <button class="rounded-full bg-white px-5 py-3 text-sm font-extrabold text-slate-950 transition hover:bg-signal hover:text-white">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <a href="about.html" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+                <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">About</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-night">Learn what dluxe24.tech covers and why it exists</h3>
+              </a>
+              <a href="privacy-policy.html" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5">
+                <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Privacy</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-night">See how the site handles privacy, services, and disclosures</h3>
+              </a>
+              <a href="contact.html" class="card-link rounded-[26px] border border-[var(--line)] bg-white p-5 sm:col-span-2">
+                <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Contact</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-night">Reach out for feedback, partnerships, or editorial questions</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">Email: hello@dluxe24.tech</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal space-y-4" style="--delay: 0.2s;">
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Open Articles</div>
+            <h2 class="mt-3 font-serif text-4xl text-night md:text-5xl">Full article sections</h2>
+          </div>
+
+          <article id="article-cover" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Cover Story</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Why the strongest editorial websites now feel like elegant apps</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Modern readers expect faster scanning, clearer hierarchy, and layouts that reward attention. The best publishing sites borrow ideas from product design:
+              stronger spacing, better pacing, obvious next steps, and sections that guide focus instead of competing for it.
+            </p>
+          </article>
+
+          <article id="article-motion" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Motion Design</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Scroll animation should support reading, not distract from it</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              The best motion adds rhythm without stealing attention. Gentle reveals, subtle lift on hover, and consistent timing can make a site feel premium while keeping the reading experience calm.
+            </p>
+          </article>
+
+          <article id="article-growth" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Reader Growth</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">The homepage pattern that turns casual visitors into loyal readers</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Loyalty usually comes from one strong lead story, a few sharp secondary reads, and a clear next action. When readers never wonder where to click next, they are far more likely to keep exploring.
+            </p>
+          </article>
+
+          <article id="article-editorial-ux" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Editorial UX</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Seven homepage blocks that keep readers moving</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Strong editorial homepages tend to repeat a reliable pattern: hero, quick briefs, feature cards, category signals, trust information, newsletter capture, and a footer that recirculates attention.
+            </p>
+          </article>
+
+          <article id="article-creator" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Creator Economy</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Why small media brands grow faster when they act like products</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Independent publishers win when they think beyond posting schedules. Clear packaging, stronger recirculation, and repeatable story formats create habits that feel dependable every time someone lands on the site.
+            </p>
+          </article>
+
+          <article id="article-design-culture" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Design Culture</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">How indie publishers make niche topics feel irresistible</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Better covers, more specific headlines, and stronger category branding can make specialized topics feel sharper and more valuable. Packaging often determines whether curiosity turns into a click.
+            </p>
+          </article>
+
+          <article id="article-ai-agents" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">AI Innovation</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">AI agents are moving from demos to real workflow teammates</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              A new wave of AI tools is doing more than answering prompts. These systems can summarize research, draft plans, organize tasks, and carry work forward between steps, which makes them genuinely useful in everyday workflows.
+            </p>
+          </article>
+
+          <article id="article-hardware" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Tech Hardware</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">The new race to build chips for AI-first products</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              AI is pushing hardware into a new phase. Faster local models, lower power use, and more responsive devices are turning chips into a visible part of the user experience rather than an invisible backend detail.
+            </p>
+          </article>
+
+          <article id="article-future-ui" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">Future UI</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Why AI-first interfaces are changing how apps are designed</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              Designers are rethinking interfaces around intent instead of exposing every possible action at once. Simpler surfaces backed by smarter behavior are making modern apps feel more helpful and more human.
+            </p>
+          </article>
+        </section>
+      </section>
 
       <aside class="space-y-6">
-        <div class="sticky-rail space-y-6">
-          <section class="reveal glass rounded-[30px] p-5 shadow-soft" style="--reveal-delay: 0.1s;">
-            <div class="mb-4 flex items-center justify-between">
-              <div>
-                <div class="section-kicker">Now Reading</div>
-                <h2 class="mt-2 text-2xl font-extrabold text-night">Reader favorites</h2>
-              </div>
-              <i class="ti ti-flame text-2xl text-signal"></i>
+        <section class="glass reveal rounded-[30px] p-6 shadow-soft" style="--delay: 0.08s;">
+          <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Trending Now</div>
+          <div class="mt-5 space-y-4">
+            <div class="rounded-[22px] bg-white p-4">
+              <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">01</div>
+              <p class="mt-2 text-base font-bold leading-7 text-night">AI copilots are being judged less on demos and more on continuity.</p>
             </div>
-            <div class="space-y-4">
-              <a href="#" class="block rounded-[22px] bg-white p-4 transition hover:bg-slate-50">
-                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">01</div>
-                <div class="mt-2 text-base font-bold leading-7 text-night">How to create a blog homepage that feels premium in under one screen</div>
-              </a>
-              <a href="#" class="block rounded-[22px] bg-white p-4 transition hover:bg-slate-50">
-                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">02</div>
-                <div class="mt-2 text-base font-bold leading-7 text-night">The visual storytelling checklist for category pages that convert</div>
-              </a>
-              <a href="#" class="block rounded-[22px] bg-white p-4 transition hover:bg-slate-50">
-                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">03</div>
-                <div class="mt-2 text-base font-bold leading-7 text-night">Why airy spacing is still one of the fastest trust signals online</div>
-              </a>
+            <div class="rounded-[22px] bg-white p-4">
+              <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">02</div>
+              <p class="mt-2 text-base font-bold leading-7 text-night">Clean article cards still outperform crowded homepage stacks.</p>
             </div>
-          </section>
-          <section class="reveal glass rounded-[30px] p-6 shadow-soft" style="--reveal-delay: 0.16s;">
-            <div class="section-kicker">Why Readers Stay</div>
-            <h2 class="mt-2 text-2xl font-extrabold text-night">A clean reading experience builds trust over time</h2>
-            <p class="mt-3 text-sm leading-7 text-slate-600">
-              Strong editorial websites earn attention by staying useful, readable, and consistent. Clear design, focused storytelling, and trustworthy site information make readers more likely to return.
-            </p>
-            <p class="mt-3 text-sm leading-7 text-slate-600">
-              Long-term growth comes from quality content and a smooth experience that feels polished on every visit.
-            </p>
-          </section>
+            <div class="rounded-[22px] bg-white p-4">
+              <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-ocean">03</div>
+              <p class="mt-2 text-base font-bold leading-7 text-night">Creators are turning newsletters into durable media brands.</p>
+            </div>
+          </div>
+        </section>
 
-          <section id="newsletter" class="reveal newsletter-gradient rounded-[30px] p-6 text-white shadow-soft" style="--reveal-delay: 0.22s;">
-            <div class="section-kicker text-blue-100">Newsletter</div>
-            <h2 class="mt-2 text-3xl font-extrabold leading-tight">Get one sharp story bundle every morning</h2>
-            <p class="mt-3 text-sm leading-7 text-slate-200">
-              Keep the form simple and the promise clear. Mid-page signups work better when they feel helpful, not aggressive.
-            </p>
-            <div class="mt-5 space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="w-full rounded-full border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 focus:border-white focus:outline-none"
-              />
-              <button class="w-full rounded-full bg-white px-4 py-3 text-sm font-extrabold text-slate-900 transition hover:bg-signal hover:text-white">
-                Subscribe now
-              </button>
-            </div>
-          </section>
-
-          <section class="reveal glass rounded-[30px] p-5 shadow-soft" style="--reveal-delay: 0.28s;">
-            <div class="section-kicker">Browse</div>
-            <h2 class="mt-2 text-2xl font-extrabold text-night">Popular tags</h2>
-            <div class="mt-5 flex flex-wrap gap-3">
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">AI</a>
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">Startups</a>
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">Design</a>
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">Media</a>
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">Remote Work</a>
-              <a href="#" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-ocean hover:text-white">Climate</a>
-            </div>
-          </section>
-        </div>
+        <section class="glass reveal rounded-[30px] p-6 shadow-soft" style="--delay: 0.14s;">
+          <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Browse Tags</div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">AI</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">Startups</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">Design</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">Hardware</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">Media</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700">Innovation</span>
+          </div>
+        </section>
       </aside>
     </main>
 
-    <footer class="footer-grid mt-10 overflow-hidden rounded-[36px] px-6 py-8 text-white md:px-8">
-      <div class="grid gap-8 border-b border-white/10 pb-8 md:grid-cols-2 lg:grid-cols-4">
+    <footer class="mt-8 overflow-hidden rounded-[34px] bg-slate-950 px-6 py-8 text-white shadow-soft md:px-8">
+      <div class="grid gap-8 border-b border-white/10 pb-8 md:grid-cols-3">
         <div>
-          <div class="brand-mark text-sm text-slate-300">
-            <span class="brand-wordmark text-4xl dark">dluxe24.tech</span>
+          <div class="brand text-sm text-slate-400">
+            <span class="brand-wordmark text-4xl">dluxe24.tech</span>
           </div>
           <p class="mt-4 max-w-sm text-sm leading-7 text-slate-300">
-            Independent coverage of technology, AI innovation, digital products, and internet culture with a clean, reader-first experience.
+            Independent coverage of technology, AI innovation, digital products, and the internet culture shaping modern work.
           </p>
         </div>
         <div>
-          <div class="text-sm font-extrabold uppercase tracking-[0.24em] text-slate-400">Sections</div>
+          <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Pages</div>
           <div class="mt-4 space-y-3 text-sm text-slate-300">
-            <a href="#latest" class="block transition hover:text-white">Latest stories</a>
-            <a href="#features" class="block transition hover:text-white">Feature stack</a>
-            <a href="#categories" class="block transition hover:text-white">Categories</a>
-            <a href="#blogs" class="block transition hover:text-white">Curated blogs</a>
-            <a href="#about-site" class="block transition hover:text-white">About</a>
+            <a href="#top-stories" class="block transition hover:text-white">Top Stories</a>
+            <a href="#blogs" class="block transition hover:text-white">Blogs</a>
+            <a href="about.html" class="block transition hover:text-white">About</a>
+            <a href="privacy-policy.html" class="block transition hover:text-white">Privacy Policy</a>
+            <a href="contact.html" class="block transition hover:text-white">Contact</a>
           </div>
         </div>
         <div>
-          <div class="text-sm font-extrabold uppercase tracking-[0.24em] text-slate-400">Social</div>
-          <div class="mt-4 flex gap-3 text-lg">
-            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white hover:text-slate-900"><i class="ti ti-brand-x"></i></a>
-            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white hover:text-slate-900"><i class="ti ti-brand-instagram"></i></a>
-            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white hover:text-slate-900"><i class="ti ti-brand-linkedin"></i></a>
-            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white hover:text-slate-900"><i class="ti ti-brand-youtube"></i></a>
+          <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">Contact</div>
+          <div class="mt-4 space-y-3 text-sm text-slate-300">
+            <a href="mailto:hello@dluxe24.tech" class="block transition hover:text-white">hello@dluxe24.tech</a>
+            <a href="https://dluxe24.tech" class="block transition hover:text-white">https://dluxe24.tech</a>
           </div>
-        </div>
-        <div>
-          <div class="text-sm font-extrabold uppercase tracking-[0.24em] text-slate-400">Contact</div>
-          <p class="mt-4 text-sm leading-7 text-slate-300">
-            hello@dluxe24.tech<br />
-            https://dluxe24.tech
-          </p>
         </div>
       </div>
       <div class="mt-6 flex flex-col gap-3 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
-        <p>Copyright 2026 dluxe24.tech. Crafted for stronger first impressions.</p>
-        <p>Original editorial content, clear site information, and Auto ads preparation included.</p>
+        <p>Copyright 2026 dluxe24.tech. Reader-first design, AdSense-ready setup, and original editorial sections included.</p>
+        <p>Built to feel clean, readable, and easy to keep exploring.</p>
       </div>
     </footer>
   </div>
 
   <script>
     const revealItems = document.querySelectorAll(".reveal");
-    const clickableCards = document.querySelectorAll("[data-open]");
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
@@ -1033,31 +529,10 @@
           }
         });
       },
-      {
-        threshold: 0.14,
-        rootMargin: "0px 0px -40px 0px",
-      }
+      { threshold: 0.14, rootMargin: "0px 0px -40px 0px" }
     );
 
     revealItems.forEach((item) => revealObserver.observe(item));
-
-    clickableCards.forEach((card) => {
-      const openTarget = () => {
-        const id = card.getAttribute("data-open");
-        const target = document.getElementById(id);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      };
-
-      card.addEventListener("click", openTarget);
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openTarget();
-        }
-      });
-    });
   </script>
 </body>
 </html>
