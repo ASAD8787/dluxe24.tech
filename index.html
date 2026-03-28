@@ -220,6 +220,7 @@
         <nav class="flex flex-wrap gap-3 text-sm font-bold text-slate-600">
           <a href="#top-stories" class="rounded-full bg-slate-900 px-4 py-2 text-white">Top Stories</a>
           <a href="#blogs" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Blogs</a>
+          <a href="#health-tips" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Health Tips</a>
           <a href="about.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">About</a>
           <a href="privacy-policy.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Privacy</a>
           <a href="contact.html" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-ocean">Contact</a>
@@ -330,7 +331,50 @@
           </div>
         </section>
 
-        <section class="reveal glass rounded-[32px] px-6 py-7 shadow-soft md:px-8" style="--delay: 0.16s;">
+        <section id="health-tips" class="reveal overflow-hidden rounded-[34px] bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-800 px-6 py-7 text-white shadow-soft md:px-8" style="--delay: 0.16s;">
+          <div class="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
+            <div class="flex flex-col justify-between rounded-[28px] border border-white/10 bg-white/8 p-6">
+              <div>
+                <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-emerald-100">
+                  Daily Health Tips
+                </div>
+                <h2 class="mt-4 font-serif text-4xl text-white md:text-5xl">A wellness layout built for quick daily wins</h2>
+                <p class="mt-4 text-sm leading-8 text-emerald-50/85">
+                  This section uses a softer wellness look so health content feels different from the rest of the site. Readers can scan short habits fast and pick one change for today.
+                </p>
+              </div>
+              <a href="#article-health" class="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-emerald-950 transition hover:bg-signal hover:text-white">
+                Read today's wellness note
+                <span aria-hidden="true">+</span>
+              </a>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article class="rounded-[26px] bg-white/10 p-5 backdrop-blur-sm">
+                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-100">Hydrate First</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-white">Start the morning with water before coffee</h3>
+                <p class="mt-3 text-sm leading-7 text-emerald-50/80">One glass of water soon after waking can help energy, focus, and a steadier start to the day.</p>
+              </article>
+              <article class="rounded-[26px] bg-white/10 p-5 backdrop-blur-sm">
+                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-100">Move After Meals</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-white">Take a 5 to 10 minute walk after lunch</h3>
+                <p class="mt-3 text-sm leading-7 text-emerald-50/80">Light movement after eating is a simple habit that can support digestion and reduce that heavy afternoon dip.</p>
+              </article>
+              <article class="rounded-[26px] bg-white/10 p-5 backdrop-blur-sm">
+                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-100">Screen Reset</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-white">Use the 20-20-20 rule for tired eyes</h3>
+                <p class="mt-3 text-sm leading-7 text-emerald-50/80">Every 20 minutes, look 20 feet away for 20 seconds to give your eyes a real break during long screen sessions.</p>
+              </article>
+              <article class="rounded-[26px] bg-white/10 p-5 backdrop-blur-sm">
+                <div class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-100">Sleep Buffer</div>
+                <h3 class="mt-3 text-2xl font-extrabold text-white">Create a calm 30 minute no-scroll zone at night</h3>
+                <p class="mt-3 text-sm leading-7 text-emerald-50/80">A short low-light wind-down routine can make sleep feel less abrupt and help the next morning start better.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal glass rounded-[32px] px-6 py-7 shadow-soft md:px-8" style="--delay: 0.2s;">
           <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div class="rounded-[28px] bg-slate-950 p-6 text-white">
               <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-blue-200">Newsletter</div>
@@ -423,6 +467,14 @@
             </p>
           </article>
 
+          <article id="article-health" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
+            <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-pine">Daily Health Tips</div>
+            <h3 class="mt-3 text-3xl font-extrabold text-night">Small health habits work better when they are easy to repeat</h3>
+            <p class="mt-4 text-sm leading-8 text-slate-600">
+              The most useful wellness advice is usually simple enough to repeat on busy days. Drinking water early, walking after meals, taking short screen breaks, and protecting a calm sleep window are small habits, but they often matter because they are realistic enough to keep.
+            </p>
+          </article>
+
           <article id="article-ai-agents" class="article-target glass rounded-[30px] p-6 shadow-soft md:p-8">
             <div class="text-xs font-extrabold uppercase tracking-[0.22em] text-ocean">AI Innovation</div>
             <h3 class="mt-3 text-3xl font-extrabold text-night">AI agents are moving from demos to real workflow teammates</h3>
@@ -497,6 +549,7 @@
           <div class="mt-4 space-y-3 text-sm text-slate-300">
             <a href="#top-stories" class="block transition hover:text-white">Top Stories</a>
             <a href="#blogs" class="block transition hover:text-white">Blogs</a>
+            <a href="#health-tips" class="block transition hover:text-white">Health Tips</a>
             <a href="about.html" class="block transition hover:text-white">About</a>
             <a href="privacy-policy.html" class="block transition hover:text-white">Privacy Policy</a>
             <a href="contact.html" class="block transition hover:text-white">Contact</a>
